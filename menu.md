@@ -9,7 +9,7 @@
 - **Frappe**: ₱200 - ₱250
 - **Shakes**:
   - Chocolate: 
-    * Small: ₹₹120, Large: ₹₹200 (Note: Prices are in PHP, so adjust accordingly)
+    * Small: PHP 120, Large: PHP 200 
     * Estimated Price (PHP): Small: 120, Large: 200  
   Corrected to:
     * Small: PHP 120, Large: PHP 200  
@@ -31,12 +31,6 @@
     
    
    
-   
-   
-   
-   
-   
-   Adjusted text for clarity and consistency:
 
    Shakes come in various flavors such as Chocolate, Strawberry, and Vanilla. Prices vary slightly by flavor but generally range from:
 
@@ -59,10 +53,10 @@
 
 Estimated Prices:
 
-1. Tuna Sandwich : ₹₹80 to ₹₹100 -> Adjusted to local currency context and corrected price range.
-2. Egg Sandwich : ₹₹60 to ₹₹90 -> Adjusted similarly.
+1. Tuna Sandwich : PHP 80 to PHP 100 -> Adjusted to local currency context and corrected price range.
+2. Egg Sandwich : PHP 60 to PHP 90 -> Adjusted similarly.
 3. Grilled Cheese with Fries : This typically ranges higher due to the inclusion of fries; estimate around ₹₹140 to ₹₹170 -> Corrected price range considering local costs.
-4. Burger with Fries : Generally more expensive than sandwiches; estimate around ₹₹190 to ₹₹240 -> Adjusted price range reflecting typical burger prices.
+4. Burger with Fries : Generally more expensive than sandwiches; estimate around PHP 190 to PHP 240 -> Adjusted price range reflecting typical burger prices.
 
 Correcting the above text for clarity and consistency using Philippine Peso:
 
@@ -150,20 +144,18 @@ Other Flavors Similarly Priced.
 Tuna/Egg/GrilledCheese/BurgerwithFries:
 
 
-TunasandwichPhp130-PHP160,EggsandwichPhp90-PHP130,
+Tuna sandwich Php 130 - PHP 160,Eggsandwich Php 90 -PHP 130,
 
 
-GrilledCheeseWithFriesPhp170-PHP220,BurgerWithFriesPhp230-PHP290
+Grilled Cheese With Fries Php 170 - PHP 220 ,Burger With Fries Php 230 - PHP 290
 
 
 
 ### Desserts/Pastas/Waffles/Cakes/Cookies/Nachos,PastaOptions:
 
 
-Waffle,Cake,Cookie,NachoPricesRangeFromPhp50toPhp100DependingOnSize,
+Waffle, Cake, Cookie, Nacho Prices Range From Php 50 to Php 100 Depending On Size,
 
 
-CreamyTunapesto/ClassicCarbonara/FilipinostylespaghettiPriceRangeFromPhp180toPhp280PerServing.
-
-
+Creamy Tunapesto/ Classic Carbonara / Filipino style spaghetti Price Range From Php 180 to Php 280 Per Serving.
 
