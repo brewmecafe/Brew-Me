@@ -1,6 +1,7 @@
 brew-me-cafe
 index.md
 ---
+---
 layout: page
 title: Brew Me Café
 permalink: /
@@ -19,8 +20,8 @@ We are passionate about serving high-quality coffee in a cozy atmosphere.
 ## Visit Us Today!
 
 [Contact Us](contact.html)
-# File Name: about.md
 
+# [File Name:] [Justine](https://www.facebook.com/justinelee72)
 ---
 layout: page
 title: About Us
@@ -40,6 +41,6 @@ permalink: /contact/
 
 # Get in Touch!
 
-Email us at [info@brewmecafe.com](mailto://info@brewmecafe.com) or visit our location today!
-[Visit About Page](about)
+Email us at [info@brewmecafe.com](mailto://brewmecafe00@gmail.com) or visit our location today!
+[Visit About Page]([about](https://www.facebook.com/justinelee72)
 _config.yml
