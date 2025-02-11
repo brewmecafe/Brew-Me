@@ -31,7 +31,7 @@ permalink: /about/
 # Our Story
 
 Brew Me Café is dedicated to providing exceptional coffee experiences.
-# File Name: contact.md
+# File Name: Brew Me Café
 
 ---
 layout: page
