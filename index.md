@@ -4,18 +4,43 @@ index.md
 ---
 layout: page
 title: Brew Me Café
-permalink: /
+permalink: 
 ---
 
-# Welcome to Brew Me Café
+# Welcome to Our Café!
 
-We are passionate about serving high-quality coffee in a cozy atmosphere.
+We are thrilled to have you join us! Our cozy café is dedicated to providing you with the best dining experience, combining delicious food and drinks with warm hospitality.
 
-## Our Menu
+## Explore Our Menu
 
-- Espresso
-- Cappuccino
-- Latte
+Enjoy our selection of specialty drinks:
+- **Expresso**
+- **Brewed**
+- **Cappuccino**
+- **Latte**
+- **Caramel Macchiato**
+- **Frappe**
+- **Shakes**, and 
+- **Coolers**
+
+Indulge in our tasty snacks made with the freshest ingredients:
+- Tuna Sandwich
+- Egg Sandwich
+- Grilled Cheese with Fries
+- Burger with Fries
+  - Waffles, Cakes, Cookies, Nachos,
+    - Creamy Tuna Pesto Pasta 
+    - Classic Carbonara Pasta 
+    - Filipino Style Spaghetti
+
+## Why Choose Us?
+
+At our café, we pride ourselves on using only the freshest ingredients and crafting each dish with love. Whether you're looking for a quick bite or a relaxing meal, we've got something for everyone.
+
+[Learn More About Us](about.md)  
+[View Full Menu](menu.md)
+
+Thank you for choosing us! We look forward to serving you.
 
 ## Visit Us Today!
 
