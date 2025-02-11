@@ -37,7 +37,6 @@ Indulge in our tasty snacks made with the freshest ingredients:
 
 At our café, we pride ourselves on using only the freshest ingredients and crafting each dish with love. Whether you're looking for a quick bite or a relaxing meal, we've got something for everyone.
 
-[Learn More About Us](about.md)  
 [View Full Menu](menu.md)
 
 Thank you for choosing us! We look forward to serving you.
