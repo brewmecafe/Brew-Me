@@ -21,7 +21,7 @@ We are passionate about serving high-quality coffee in a cozy atmosphere.
 
 [Contact Us](contact.html)
 
-# [File Name:] [Justine](https://www.facebook.com/justinelee72)
+# My Account: [Justine](https://www.facebook.com/justinelee72)
 ---
 layout: page
 title: About Us
@@ -42,5 +42,5 @@ permalink: /contact/
 # Get in Touch!
 
 Email us at [info@brewmecafe.com](mailto://brewmecafe00@gmail.com) or visit our location today!
-[Visit About Page]([about](https://www.facebook.com/justinelee72)
+[Visit About Page] [about](https://www.facebook.com/goodshit.page/)
 _config.yml
