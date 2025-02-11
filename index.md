@@ -42,5 +42,4 @@ permalink: /contact/
 # Get in Touch!
 
 Email us at [info@brewmecafe.com](mailto://brewmecafe00@gmail.com) or visit our location today!
-[Visit About Page] [about](https://www.facebook.com/goodshit.page/)
-_config.yml
+[Visit About Page](https://www.facebook.com/goodshit.page/)
