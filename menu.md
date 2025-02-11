@@ -55,10 +55,9 @@ Estimated Prices:
 
 1. Tuna Sandwich : PHP 80 to PHP 100 -> Adjusted to local currency context and corrected price range.
 2. Egg Sandwich : PHP 60 to PHP 90 -> Adjusted similarly.
-3. Grilled Cheese with Fries : This typically ranges higher due to the inclusion of fries; estimate around ₹₹140 to ₹₹170 -> Corrected price range considering local costs.
-4. Burger with Fries : Generally more expensive than sandwiches; estimate around PHP 190 to PHP 240 -> Adjusted price range reflecting typical burger prices.
+3. Grilled Cheese with Fries : This typically ranges higher due to the inclusion of fries; estimate around PHP 140 to PHP 170 
+4. Burger with Fries : Generally more expensive than sandwiches; estimate around PHP 190 to PHP 240
 
-Correcting the above text for clarity and consistency using Philippine Peso:
 
 1. Tuna Sandwich :
    Estimated Price Range in Pesos = From approximately PHpP130 To PHpP160
@@ -79,7 +78,6 @@ Correcting the above text for clarity and consistency using Philippine Peso:
 2.Cakes,
 3.Cookies,
 4.Nachos,
-
 5.Creamy Tuna Pesto Pasta,
 6.Classic Carbonara Pasta,
 7.Filipino Style Spaghetti,
@@ -126,7 +124,7 @@ Finalized Menu:
 * Cappuccino : php150-php180  
 * Latte : php150-php180  
 * Caramel Macchiato : php180-php220  
-* Frappe/Shake/Cooler Options :
+* Frappe / Shake / Cooler Options :
 
 Chocolate Shake :
 +Small(12oz)php150,Large(20oz)php250  
@@ -141,7 +139,7 @@ Other Flavors Similarly Priced.
 ### Sandwiches/Burgers
 
 
-Tuna/Egg/GrilledCheese/BurgerwithFries:
+Tuna / Egg / Grilled Cheese / BurgerwithFries:
 
 
 Tuna sandwich Php 130 - PHP 160,Eggsandwich Php 90 -PHP 130,
@@ -151,7 +149,7 @@ Grilled Cheese With Fries Php 170 - PHP 220 ,Burger With Fries Php 230 - PHP 290
 
 
 
-### Desserts/Pastas/Waffles/Cakes/Cookies/Nachos,PastaOptions:
+### Desserts / Pastas / Waffles / Cakes / Cookies / Nachos, PastaOptions:
 
 
 Waffle, Cake, Cookie, Nacho Prices Range From Php 50 to Php 100 Depending On Size,
