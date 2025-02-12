@@ -1,76 +1,121 @@
-# Brew-Me Online Ordering
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew-Me Online Ordering</title>
+    <script>
+        function updateTotal() {
+            let total = 0;
+            document.querySelectorAll('.menu-item').forEach(item => {
+                let basePrice = parseInt(item.dataset.price);
+                let toppingPrice = parseInt(item.querySelector('select').value) || 0;
+                let quantity = parseInt(item.querySelector('input').value) || 0;
+                total += (basePrice + toppingPrice) * quantity;
+            });
+            document.getElementById('totalPrice').innerText = "₱" + total;
+        }
+    </script>
+</head>
+<body>
+    <h1>Brew-Me Online Ordering</h1>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="category">
+            <h2>Drinks</h2>
+            <div class="menu-item" data-price="120">
+                <label>Espresso (₱120 - ₱150)</label>
+                <input type="number" name="espresso_qty" value="0" min="0" onchange="updateTotal()">
+                <select name="espresso_topping" onchange="updateTotal()">
+                    <option value="0">No Toppings</option>
+                    <option value="30">Extra Shot (₱30)</option>
+                    <option value="20">Whipped Cream (₱20)</option>
+                </select>
+            </div>
+            <div class="menu-item" data-price="80">
+                <label>Brewed Coffee (₱80 - ₱100)</label>
+                <input type="number" name="brewed_coffee_qty" value="0" min="0" onchange="updateTotal()">
+                <select name="brewed_coffee_topping" onchange="updateTotal()">
+                    <option value="0">No Toppings</option>
+                    <option value="30">Extra Shot (₱30)</option>
+                </select>
+            </div>
+            <div class="menu-item" data-price="150">
+                <label>Cappuccino (₱150 - ₱180)</label>
+                <input type="number" name="cappuccino_qty" value="0" min="0" onchange="updateTotal()">
+                <select name="cappuccino_topping" onchange="updateTotal()">
+                    <option value="0">No Toppings</option>
+                    <option value="20">Caramel Drizzle (₱20)</option>
+                </select>
+            </div>
+            <div class="menu-item" data-price="180">
+                <label>Caramel Macchiato (₱180 - ₱220)</label>
+                <input type="number" name="caramel_macchiato_qty" value="0" min="0" onchange="updateTotal()">
+                <select name="caramel_macchiato_topping" onchange="updateTotal()">
+                    <option value="0">No Toppings</option>
+                    <option value="30">Extra Caramel (₱30)</option>
+                </select>
+            </div>
+            <div class="menu-item" data-price="200">
+                <label>Frappe (₱200 - ₱250)</label>
+                <input type="number" name="frappe_qty" value="0" min="0" onchange="updateTotal()">
+                <select name="frappe_topping" onchange="updateTotal()">
+                    <option value="0">No Toppings</option>
+                    <option value="30">Chocolate Chips (₱30)</option>
+                </select>
+            </div>
+            <div class="menu-item" data-price="150">
+                <label>Chocolate Shake Small (₱150) / Large (₱250)</label>
+                <input type="number" name="chocolate_shake_qty" value="0" min="0" onchange="updateTotal()">
+                <select name="chocolate_shake_topping" onchange="updateTotal()">
+                    <option value="0">No Toppings</option>
+                    <option value="30">Extra Chocolate (₱30)</option>
+                </select>
+            </div>
+        </div>
 
-## Drinks
+        <div class="category">
+            <h2>Snacks & Meals</h2>
+            <div class="menu-item" data-price="130">
+                <label>Tuna Sandwich (₱130 - ₱160)</label>
+                <input type="number" name="tuna_sandwich_qty" value="0" min="0" onchange="updateTotal()">
+                <select name="tuna_sandwich_topping" onchange="updateTotal()">
+                    <option value="0">No Toppings</option>
+                    <option value="30">Extra Tuna (₱30)</option>
+                </select>
+            </div>
+            <div class="menu-item" data-price="230">
+                <label>Burger with Fries (₱230 - ₱290)</label>
+                <input type="number" name="burger_qty" value="0" min="0" onchange="updateTotal()">
+                <select name="burger_topping" onchange="updateTotal()">
+                    <option value="0">No Toppings</option>
+                    <option value="40">Extra Patty (₱40)</option>
+                    <option value="20">Cheese (₱20)</option>
+                </select>
+            </div>
+        </div>
 
-### Espresso (₱120 - ₱150)
-**Add-ons:** Extra Shot (₱30), Whipped Cream (₱20)
+        <div class="category">
+            <h2>Desserts & Pastas</h2>
+            <div class="menu-item" data-price="50">
+                <label>Waffles (₱50 - ₱100)</label>
+                <input type="number" name="waffles_qty" value="0" min="0" onchange="updateTotal()">
+                <select name="waffles_topping" onchange="updateTotal()">
+                    <option value="0">No Toppings</option>
+                    <option value="20">Chocolate Syrup (₱20)</option>
+                </select>
+            </div>
+            <div class="menu-item" data-price="180">
+                <label>Classic Carbonara (₱180 - ₱280)</label>
+                <input type="number" name="carbonara_qty" value="0" min="0" onchange="updateTotal()">
+                <select name="carbonara_topping" onchange="updateTotal()">
+                    <option value="0">No Toppings</option>
+                    <option value="40">Extra Cheese (₱40)</option>
+                </select>
+            </div>
+        </div>
 
-### Brewed Coffee (₱80 - ₱100)
-**Add-ons:** Extra Shot (₱30), Whipped Cream (₱20)
-
-### Cappuccino (₱150 - ₱180)
-**Add-ons:** Caramel Drizzle (₱20), Extra Shot (₱30)
-
-### Latte (₱150 - ₱180)
-**Add-ons:** Vanilla Syrup (₱20), Caramel Drizzle (₱20)
-
-### Caramel Macchiato (₱180 - ₱220)
-**Add-ons:** Extra Caramel (₱30), Whipped Cream (₱20)
-
-### Frappe (₱200 - ₱250)
-**Add-ons:** Chocolate Chips (₱30), Whipped Cream (₱20)
-
-### Shakes
-- **Chocolate Shake**
-  - Small: ₱150 | Large: ₱250
-  - **Add-ons:** Extra Chocolate (₱30), Whipped Cream (₱20)
-- **Strawberry Shake**
-  - Small: ₱160 | Large: ₱260
-  - **Add-ons:** Fresh Strawberries (₱40), Whipped Cream (₱20)
-- **Vanilla Shake**
-  - Small: ₱150 | Large: ₱250
-  - **Add-ons:** Caramel Drizzle (₱30), Whipped Cream (₱20)
-
-## Snacks & Meals
-
-### Sandwiches & Burgers
-
-#### Tuna Sandwich (₱130 - ₱160)
-**Add-ons:** Extra Tuna (₱30), Cheese (₱20)
-
-#### Egg Sandwich (₱90 - ₱130)
-**Add-ons:** Extra Egg (₱30), Cheese (₱20)
-
-#### Grilled Cheese with Fries (₱170 - ₱220)
-**Add-ons:** Extra Cheese (₱30), Bacon (₱40)
-
-#### Burger with Fries (₱230 - ₱290)
-**Add-ons:** Extra Patty (₱50), Cheese (₱30), Bacon (₱40)
-
-## Desserts & Pastas
-
-#### Waffles, Cakes, Cookies, Nachos (₱50 - ₱100)
-**Add-ons:** Chocolate Syrup (₱20), Extra Toppings (₱30)
-
-#### Creamy Tuna Pesto Pasta (₱180 - ₱280)
-**Add-ons:** Extra Cheese (₱30), Extra Tuna (₱40)
-
-#### Classic Carbonara Pasta (₱180 - ₱280)
-**Add-ons:** Extra Bacon (₱40), Extra Cheese (₱30)
-
-#### Filipino Style Spaghetti (₱180 - ₱280)
-**Add-ons:** Extra Cheese (₱30), Extra Meat Sauce (₱40)
-
----
-
-## Total: ₱<span id="total-price">0</span>
-
-<button onclick="placeOrder()">Place Order</button>
-
-<script>
-function placeOrder() {
-    alert('Order placed successfully!');
-    // Send order to Formspree
-}
-</script>
-
+        <h2>Total Price: <span id="totalPrice">₱0</span></h2>
+        <button type="submit">Place Order</button>
+    </form>
+</body>
+</html>
