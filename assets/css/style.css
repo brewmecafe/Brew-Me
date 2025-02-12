@@ -16,10 +16,10 @@ body::before {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    opacity: 0.85; /* Set opacity to 85% */
+    opacity: 0.5; /* Set opacity to 50% */
     z-index: -1;
 }
 
 git add assets/css/style.css
-git commit -m "Increased background opacity to 85%"
+git commit -m "Changed background opacity to 50%"
 git push origin main
