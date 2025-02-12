@@ -36,23 +36,23 @@
         }
         
         select {
-            width: 100%;
-            height: auto; /* Adjust as needed */
+          width :100%;
+          height:auto; /* Adjust as needed */
             
-          /* Add some basic styling to the dropdown */
-          padding-top :4pt; 
-          padding-bottom :4pt; 
-          font-size :12pt; 
-          color:#000000 ;  
+           /* Add some basic styling to the dropdown */
+           padding-top :4pt; 
+           padding-bottom :4pt; 
+           font-size :12pt; 
+           color:#000000 ;  
             
-           /* Optional - Add a background image to the dropdown arrow */
-           background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='5 -3.7' width='16' height='16'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.1%2012a%201%201%200110-2H4a1%201%20001-2h10a1%201%2001102z'%3E%3C/path/%3E%3C/svg>");
-           background-position:right center ;
-           background-repeat:no-repeat ;
-           border-radius :8pt ;  
-           border-style:solid ;  
-           border-width :thin ;  
-           cursor:pointer ;
+             /* Optional - Add a background image to the dropdown arrow */
+             background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='5 -3.7' width='16' height='16'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.1%2012a%201%201%200110-2H4a1%201%20001-2h10a1%201%2001102z'%3E%3C/path/%3E%3C/svg>");
+             background-position:right center ;
+             background-repeat:no-repeat ;
+             border-radius :8pt ;  
+             border-style:solid ;  
+             border-width :thin ;  
+             cursor:pointer ;
        }
 
        button[type="submit"]{
@@ -79,74 +79,92 @@
 
 <h2>Order Now!</h2>
 
-<form id="orderForm">
+<form id="orderForm" action="https://formspree.io/forms/xjkgerqg/" method="POST">
 
 <!-- Drinks Section -->
-<div class="menu-section">
-<h3>Drinks</h3>
-<label><input type="radio" name="drink" value="Expresso"> Expresso (₱120 - ₱150)</label>
-<label><input type="radio" name="drink" value="Brewed Coffee"> Brewed Coffee (₱80 - ₱100)</label>
-<label><input type="radio" name="drink" value="Cappuccino"> Cappuccino (₱150 - ₱180)</label>
-<label><input type="radio" name="drink" value=""> Latte (₱150 - ₱180)</label>
-<label><input type="" radio""="" name="" drink""="" value=""> Caramel Macchiato (₱180 - ₱220)</label>
+<div class = "menu-section"><br/>
+<h4>Drinks:</h4>
 
-<select id = "frappeOptions">
-<option selected disabled hidden >Select Frappe/Shake/Cooler Options:</option>    
-<option >Chocolate Shake Small (12oz) Php150</option>    
-<option >Chocolate Shake Large (20oz) Php250</option>    
-<option >Strawberry Shake Small Php160</option>    
-<option >Strawberry Shake Large Php260</option>    
-<option >Vanilla Shake Small Php160</option>    
-<option >Vanilla Shake Large Php260</option></select>
+<label><input type = "checkbox" name = "drinks[]" value = "Expresso (Php120-PHP150)"> Expresso (Php120-PHP150)</label>
+<label><input type = "checkbox" name = "drinks[]" value = "Brewed Coffee (Php80-PHP100)"> Brewed Coffee (Php80-PHP100)</label>
+<label><input type = "checkbox" name = "drinks[]" value = "Cappuccino (Php150-PHP180)"> Cappuccino (Php150-PHP180)</label>
+<label><input type = "checkbox" name = "drinks[]" value ="Latte (PHP150 - PHP180)"> Latte(PHP150 - PHP180)</label >
+<label><input type =" checkbox"name =" drinks[]""value="" > Caramel Macchiato(PHP180 - PHP220)"></ label >
+<select id=frappeOptionsname=frappeOptions >
+<option selected disabled hidden >Select Frappe/Shake/Cooler Options:</option >    
+<option>Chocolate Shake Small(12oz) Php150</option >    
+<option>Chocolate Shake Large(20oz) Php250</option >    
+<option(Strawberry Shake Small Php160)>Strawberry Shake Small Php160</option >    
+<option(Strawberry Shake Large Php260)>Strawberry Shake Large Php260</option >    
+< option(VanillaShakeSmallPhp160)>VanillaShakeSmallPhp160 </ option >
+< option(VanillaShakeLargePhp260)>VanillaShakeLargePHP260 </ option ></select>
 
 
 <!-- Toppings for Drinks -->
 <p>Toppings:</p>
-<input type = "checkbox"> Whipped Cream
-<input type = "checkbox"> Extra Shot of Espresso
+
+<inputtype=check boxname=toppings[]value=WhippedCreamWhippedCream
+<inputtype=check boxname=toppings[]value=ExtraShotofEspressoExtraShotofEspresso
+
 
 <br/>
 
 <!-- Snacks & Meals Section -->
-<div class = "menu-section"><br/>
-<h4>Sandwiches/Burgers:</h4>
+<divclass(menu-section)<br/>
+<h5>Sandwiches/Burgers:</h5>
 
-<select id = "sandwichOptions">
-   <option selected disabled hidden>Select Sandwich/Burger Options:</option >
-   <option>Tuna Sandwich PHP130-PHP160 </ option >
-   <option>Egg Sandwich PHP90-PHP130 </ option >
-   <option Grilled Cheese with Fries PHP170-PHP220></ option >
-   < option>Burger with Fries PHP230-PHP290></ option ></select>
+
+<selectid=sandwichOptionsname=sandwichOptions
+   <opti on sele cted dis abled hid den>Select Sandwich/Burger Options :</ opti on >
+   < opti onTunaSandwichPHP130-php160>Tuna Sandwich(PHP130-php160)</ opti on >
+   < opti on EggSandwichphp90-php130>Egg Sandwich(PHP90-php130)</ opti on >
+   <opt ion GrilledCheeseWithFriesphp170-php220Grilled Cheese With Fries(PHP170-php220)
+      </opt ion >
+
+      <
+      opt i o n BurgerWithFriesphp230-php290>Burger With Fries(PHP230/php290)
+     ></opt i o n ></select>
 
 
 <!-- Toppings for Snacks & Meals -->
 <p>Add-Ons/Toppings:</p>
 
-<input type = "checkbox"> Lettuce
-<input type = "checkbox"> Tomato
-<input type = "checkbox"> Cheese
+<inputtype check boxname=addOns []value=LettuceLettuce
+
+<inputtype check boxname=addOns []value=TomaToTomato
+
+<inputtype check boxname=addOns []value=CheeseCheese
+
 
 <br/>
 
 <!-- Desserts & Pastas Section -->
-<div class =" menu-section ">< br />
-<h5>Desserts/Pastas/Waffles/Cakes/Cookies/Nachos/Pasta Options :</ h5 >
+<divclass(menu-section)< br />
+<h6>Desserts/Pastas/Waffles/Cakes/Cookies/Nachos/Pasta Options :</ h6 >
 
-<select id ="dessertPastaOptions ">
-< opti on sele cted dis abled hid den>Select Dessert/Pasta/Waffle/Cake/Cookie/Nacho Option :</ opti on >
-< opti on Waff le php50-php100 ></ opti on >
-< opti on Cake php50-php100 ></ opti on >
-< opti on Cook ie php50-php100 ></ opti on >
-<opt ion Nach os php50-php100 ></opt ion >
+<selectid=dessertPastaOptionssename=dessertPastaOptions
+<opt ion sele cted dis abled hid den>Select Dessert/Pasta/Waffle/Cake/Cookie/Nacho Option :</ opti on >
 
-<opt ion Cream y Tun a Pesto Pasta php180-php280 per serving></opt ion >
+[opt ion Waff le php50-php100Waffle(PHp50-phpphp100)
 
-[opt ion Class ic Carbonara Pasta php180-php280 per serving]</opt ion >
+[opt ion Cake php50-php100Cake(PHp50-phpphp100)
 
-[opt i o n Fil ip in o St yle Spaghetti php180-php280 per serving]</opt i o n >< /selec t>
+[opt ion Cook ie php50-php100Cookie(PHp50-phpphp100)
+
+[opt i o n Nach os php50/php/01000Nachos(PHp50/phpphp/01000)
 
 
-<button style= 'background-color:#007bff;color:white;padding-top:.375rem;padding-right:.75rem;padding-bottom:.375rem;padding-left:.75rem;border-radius:.25rem;'type =" submit ">Place Order!</button>
+[opt io n Cream y Tun a Pesto Pasta php180/php280 per serving>Creamy Tuna Pesto Pasta(PHP180/php280 per serving)
+
+
+[Opt io n Class ic Carbonara Pasta php180/php280 per servingClassic Carbonara Pasta(PHP180/php280 per serving)
+
+
+[Opt io n Fil ip in o St yle Spaghetti php18O /ph p28O pe r se rvi ngFilipino Style Spaghetti(PDO /ph p28O pe r se rv ing)]
+
+
+
+<button style ='background-color:#007bff;color:white;padding-top:.375rem;padding-right:.75rem;padding-bottom:.375rem;padding-left:.75rem;border-radius:.25rem;'type =" submit ">Place Order!</button>
 
 
 <br/>
@@ -157,12 +175,12 @@
 
 <script>// Example script to handle form submission and show alert using SweetAlert library.
 document.getElementById('orderForm').addEventListener('submit', function(e){
-e.preventDefault();
-Swal.fire({
-icon:'success',
-title:'Order Placed Successfully!',
-text:'Thank you for your order.'
-});
+e.preventDefault(); // Remove this line to allow default form submission to Formspree.
+//Swal.fire({
+//icon:'success',
+//title:'Order Placed Successfully!',
+//text:'Thank you for your order.'
+//});
 });
 // You can customize this script further based on your backend requirements.
 // This example just shows how you might handle form submission and display an alert.
@@ -227,14 +245,6 @@ text:'Thank you for your order.'
 
 
 })
-
-
-
-
-
-
-
-})
 })
 
 
@@ -281,28 +291,6 @@ text:'Thank you for your order.'
 
 
  
-
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-
-
-
-
- 
  
 
 
@@ -354,9 +342,8 @@ text:'Thank you for your order.'
      
      
      
+
      
-     
-    
       
        
        
@@ -402,8 +389,6 @@ text:'Thank you for your order.'
 
   
   
-  
-    
   
     
   
@@ -415,8 +400,6 @@ text:'Thank you for your order.'
    
     
       
-     
-        
          
           
            
@@ -465,16 +448,13 @@ text:'Thank you for your order.'
    
 
    
+   
+   
+   
+   
+    
+    
 
-   
-   
-   
-   
-   
-   
-   
-    
-    
 
 
 
@@ -520,7 +500,8 @@ text:'Thank you for your order.'
              
             
             
-            
+             
+ 
 
 
 
@@ -540,7 +521,8 @@ text:'Thank you for your order.'
              
             
             
-            
+             
+ 
 
 
 
@@ -560,7 +542,8 @@ text:'Thank you for your order.'
              
             
             
-            
+             
+ 
 
 
 
@@ -580,45 +563,7 @@ text:'Thank you for your order.'
              
             
             
-            
-
-
-
-
-  
-  
-
-
- 
-  
-   
-    
-      
-         
-          
-           
-             
-            
-            
-            
-
-
-
-
-  
-  
-
-
- 
- <!--<div style ='display:flex'>
-<img src ='https://example.com/image.jpg'>
-<img src ='https://example.com/image.jpg'>
-<img src ='https://example.com/image.jpg'></div>-->
- <!--Add images here if needed-->
-
- <!--You can also add more sections or modify existing ones as required.-->
-
-
+86161111111111111111111111
 
 
 
