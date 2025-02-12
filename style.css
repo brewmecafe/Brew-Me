@@ -3,34 +3,55 @@
 /* Set the background image */
 body {
     background-image: url('https://github.com/brewmecafe/Brew-Me/blob/62f7eb08e22acdcf93391d2d2b7ffe00df3955cb/Brew%20Me%20caf%C3%A9.png?raw=true');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;  /* Optional: Keeps the background fixed when scrolling */
-    color: #fff;  /* Make text white for better visibility */
-    font-family: Arial, sans-serif;
+    background-size: cover;            /* Ensures the image covers the entire background */
+    background-position: center;       /* Centers the background image */
+    background-attachment: fixed;      /* Keeps the background fixed when scrolling */
+    color: #fff;                       /* Makes text white for better visibility */
+    font-family: Arial, sans-serif;    /* Default font */
 }
 
 /* Customize headings */
 h1, h2, h3 {
-    color: #fff; /* White text color */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  /* Add shadow for readability */
+    color: #fff;                       /* White text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  /* Adds a shadow to text for better visibility */
 }
 
-/* Add spacing and padding for readability */
+/* Ensure content is readable */
 .container {
     padding: 50px;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background to enhance readability */
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+    border-radius: 8px;                    /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
 }
-# _config.yml
-theme: jekyll-theme-cayman  # or any other theme you're using
-stylesheets:
-  - /assets/css/style.css  # Link to the custom CSS file
-/index.md (Main page)
+
+/* Add extra styles for links, buttons, and other elements for better design */
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #ffcc00;  /* A soft yellow color on hover for links */
+}
+/index.md (Main Page)
 _about.md (About Us Page)
 _contact.md (Contact Us Page)
 _assets/
   /css/
     style.css  (Custom CSS)
 _config.yml
+# _config.yml
+title: Brew Me Café
+description: "Welcome to Brew Me Café - Exceptional Coffee and Food!"
+baseurl: ""  # Keep this empty if you're using the root domain
+url: "https://brewmecafe.github.io"  # Your GitHub Pages URL
+
+theme: jekyll-theme-cayman  # Or the theme you're using
+sass:
+  style: compressed
+
+# Add custom CSS
+stylesheets:
+  - /assets/css/style.css  # Make sure the file path is correct
+https://github.com/brewmecafe/Brew-Me/blob/62f7eb08e22acdcf93391d2d2b7ffe00df3955cb/Brew%20Me%20caf%C3%A9.png?raw=true
