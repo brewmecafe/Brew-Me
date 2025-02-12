@@ -2,12 +2,9 @@
 layout: page
 title: Brew Me Café
 permalink: /
-cover_image: https://github.com/brewmecafe/Brew-Me/blob/62f7eb08e22acdcf93391d2d2b7ffe00df3955cb/Brew%20Me%20caf%C3%A9.png
 ---
 
 # Welcome to Brew Me Café!
-
-![Brew Me Café Cover](https://github.com/brewmecafe/Brew-Me/blob/62f7eb08e22acdcf93391d2d2b7ffe00df3955cb/Brew%20Me%20caf%C3%A9.png?raw=true)
 
 We are thrilled to have you join us! Our cozy café is dedicated to providing you with the best dining experience, combining delicious food and drinks with warm hospitality.
 
