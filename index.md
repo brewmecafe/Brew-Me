@@ -46,11 +46,10 @@ Thank you for choosing us! We look forward to serving you.
 
 # My Account: [Justine](https://www.facebook.com/justinelee72)
 
-
 ---
 layout: page
-title: About Us
-permalink: /about/
+title: Brew Me Café
+permalink: /
 ---
 
 # Our Story
