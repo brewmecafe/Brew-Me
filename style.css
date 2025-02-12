@@ -1,0 +1,36 @@
+/* style.css */
+
+/* Set the background image */
+body {
+    background-image: url('https://github.com/brewmecafe/Brew-Me/blob/62f7eb08e22acdcf93391d2d2b7ffe00df3955cb/Brew%20Me%20caf%C3%A9.png?raw=true');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;  /* Optional: Keeps the background fixed when scrolling */
+    color: #fff;  /* Make text white for better visibility */
+    font-family: Arial, sans-serif;
+}
+
+/* Customize headings */
+h1, h2, h3 {
+    color: #fff; /* White text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  /* Add shadow for readability */
+}
+
+/* Add spacing and padding for readability */
+.container {
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background to enhance readability */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+# _config.yml
+theme: jekyll-theme-cayman  # or any other theme you're using
+stylesheets:
+  - /assets/css/style.css  # Link to the custom CSS file
+/index.md (Main page)
+_about.md (About Us Page)
+_contact.md (Contact Us Page)
+_assets/
+  /css/
+    style.css  (Custom CSS)
+_config.yml
