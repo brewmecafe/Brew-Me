@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Online - Brew Me Café</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h2 {
+            color: #ff6600;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        label, input {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        button {
+            background-color: #ff6600;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #ff4500;
+        }
+    </style>
+</head>
+<body>
+    <h2>🛒 Order Online</h2>
+    <p>Select your favorite food and drinks below.</p>
+    
+    <form action="https://formspree.io/f/YOUR_FORMSPREE_LINK" method="POST">
+        <h3>☕ Specialty Drinks</h3>
+        <label>Espresso - ₱50</label>
+        <input type="number" name="Espresso" min="0" value="0">
+        
+        <label>Brewed Coffee - ₱60</label>
+        <input type="number" name="Brewed Coffee" min="0" value="0">
+        
+        <h3>🍽️ Snacks & Food</h3>
+        <label>Tuna Sandwich - ₱85</label>
+        <input type="number" name="Tuna Sandwich" min="0" value="0">
+        
+        <label>Burger with Fries - ₱120</label>
+        <input type="number" name="Burger with Fries" min="0" value="0">
+        
+        <h3>🍝 Pasta</h3>
+        <label>Carbonara - ₱140</label>
+        <input type="number" name="Carbonara" min="0" value="0">
+        
+        <h3>📩 Contact Details</h3>
+        <label>Name:</label>
+        <input type="text" name="name" required>
+        
+        <label>Email:</label>
+        <input type="email" name="email" required>
+        
+        <label>Phone:</label>
+        <input type="tel" name="phone" required>
+        
+        <button type="submit">🛍️ Submit Order</button>
+    </form>
+</body>
+</html>
