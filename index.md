@@ -78,4 +78,45 @@ Thank you for your interest in Brew Me Café. We look forward to hearing from yo
 [Visit About Page](about.html)
 
 
-<a href="https://brewmecafe.github.io/Brew-Me/order.html" class="order-btn">🛒 Order Online</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Online</title>
+    <style>
+        .order-btn {
+            display: inline-flex;
+            align-items: center;
+            background-color: #ff6600;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .order-btn img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        .order-btn:hover {
+            background-color: #e65c00;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <a href="order.html" class="order-btn">
+        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Cart">
+        Order Online
+    </a>
+
+</body>
+</html>
+
