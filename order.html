@@ -3,74 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Ordering - Brew Me Café</title>
+    <title>Order Online - Brew Me Café</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; }
-        .menu-item { margin: 10px 0; }
-        .total-container { margin-top: 20px; font-size: 20px; font-weight: bold; }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .order-container {
+            width: 80%;
+            max-width: 800px;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+            color: #333;
+        }
+        .menu-section {
+            margin: 20px 0;
+        }
+        .menu-section h2 {
+            font-size: 20px;
+            color: #555;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        .menu-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+            font-size: 18px;
+        }
+        .menu-item input[type="number"] {
+            width: 60px;
+            padding: 5px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .total {
+            font-size: 22px;
+            font-weight: bold;
+            color: #28a745;
+            margin: 20px 0;
+        }
+        .customer-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .customer-info input, .customer-info textarea {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .submit-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
 
-    <h2>🛒 Order Online</h2>
-    <p>Select your items and quantities below:</p>
+    <div class="order-container">
+        <h1>🛒 Order Online</h1>
+        <p>Select your items and quantities below:</p>
 
-    <form action="https://formspree.io/f/xjkgerqg" method="POST">
-        <!-- Menu Items -->
-        <div class="menu-item">
-            ☕ **Espresso - ₱50** 
-            <input type="number" name="espresso" value="0" min="0" class="order-qty" data-price="50">
-        </div>
-
-        <div class="menu-item">
-            ☕ **Brewed Coffee - ₱60** 
-            <input type="number" name="brewed_coffee" value="0" min="0" class="order-qty" data-price="60">
-        </div>
-
-        <div class="menu-item">
-            🍔 **Burger with Fries - ₱120** 
-            <input type="number" name="burger_fries" value="0" min="0" class="order-qty" data-price="120">
-        </div>
-
-        <div class="menu-item">
-            🍝 **Creamy Tuna Pesto Pasta - ₱150** 
-            <input type="number" name="tuna_pasta" value="0" min="0" class="order-qty" data-price="150">
-        </div>
-
-        <!-- Total Price -->
-        <div class="total-container">
-            Total: **₱<span id="total-price">0</span>**
-        </div>
-
-        <!-- Customer Info -->
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <input type="tel" name="phone" placeholder="Phone Number" required>
-        <textarea name="notes" placeholder="Special Requests (Optional)"></textarea>
-
-        <button type="submit">Submit Order</button>
-    </form>
-
-    <script>
-        // JavaScript to update total price
-        const orderInputs = document.querySelectorAll(".order-qty");
-        const totalPriceEl = document.getElementById("total-price");
-
-        function updateTotal() {
-            let total = 0;
-            orderInputs.forEach(input => {
-                let qty = parseInt(input.value);
-                let price = parseInt(input.dataset.price);
-                total += qty * price;
-            });
-            totalPriceEl.textContent = total;
-        }
-
-        // Attach event listener to all quantity inputs
-        orderInputs.forEach(input => {
-            input.addEventListener("input", updateTotal);
-        });
-    </script>
-
-</body>
-</html>
+        <form action="https://formspree.io/f/xjkgerqg" method="POST">
+            <!-- Drinks Section -->
+            <div class="menu-section">
+                <h2>Drinks</h2>
+                <div class="menu-item">
+                    ☕ <strong>Espresso (₱120 - ₱150)</strong>
+                    <input type="number" name="Espresso" value="0" min="0" data-price="135">
+                </div>
+                <div class="menu-item">
+                    ☕ <strong>Brewed Coffee (₱80 - ₱100)</strong>
+                    <input type="number" name="Brewed Coffee" value="0" min="0" data-price="90">
+                </div>
+                <div class="menu-item">
+                    ☕ <strong>Cappuccino (₱150 - ₱180)</strong>
+                    <input type="number" name="Cappuccino" value="0" min="0" data-price="165">
+                </div>
+                <div class="menu-item">
+                    ☕ <strong>Latte (₱150 - ₱180)</strong>
+                    <input type="number" name="Latte" value="0" min="0" data-price="165">
+                </div>
+                <div class="menu-item">
+                    ☕ <strong>Caramel Macchiato (₱180 - ₱220)</strong>
+                    <input type="number" name="Caramel Macchiato" value="0" min="0" data-price="200">
+                </div>
+                <div class="menu-item">
+                    🍹 <strong>Frappe (₱200 - ₱250)</strong>
+                    <input type="number" name="Frappe" value="0" min="0" data-price="225">
+                </div>
+                <div class="menu-item">
+                    🥤 <strong>Chocolate Shake - Small (₱150)</strong>
+                    <input type="number" name="Chocolate Shake - Small" value="0" min="0" data-price="150">
+                </div>
+                <div class="menu-item">
+                    🥤 <strong>Chocolate Shake - Large (₱250)</strong>
+                    <input type="number" name="Chocolate Shake - Large" value="0" min="0" data-price="250">
+                </div>
+                <div class="menu-item">
+                    🥤 <strong>Strawberry Shake - Small (₱150)</strong>
+                    <input type="number" name="Strawberry Shake - Small" value="0" min="0" data-price="150">
+                </div>
+                <div class="menu-item">
+                    🥤 <strong>Strawberry Shake - Large (₱250)</strong>
+                   
+::contentReference[oaicite:0]{index=0}
+ 
