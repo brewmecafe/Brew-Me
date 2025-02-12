@@ -2,56 +2,30 @@
 
 /* Set the background image */
 body {
-    background-image: url('https://github.com/brewmecafe/Brew-Me/blob/62f7eb08e22acdcf93391d2d2b7ffe00df3955cb/Brew%20Me%20caf%C3%A9.png?raw=true');
-    background-size: cover;            /* Ensures the image covers the entire background */
-    background-position: center;       /* Centers the background image */
-    background-attachment: fixed;      /* Keeps the background fixed when scrolling */
-    color: #fff;                       /* Makes text white for better visibility */
-    font-family: Arial, sans-serif;    /* Default font */
+    background-image: url('/assets/images/Brew%20Me%20café.png');  /* Correct path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #000000;  /* Change default text color to black */
+    font-family: Arial, sans-serif;
 }
 
-/* Customize headings */
+/* Customize text color for headings on index page */
 h1, h2, h3 {
-    color: #fff;                       /* White text color */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  /* Adds a shadow to text for better visibility */
+    color: #000000; /* Change headings to black */
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);  /* Add a subtle shadow to improve readability */
 }
 
-/* Ensure content is readable */
-.container {
-    padding: 50px;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
-    border-radius: 8px;                    /* Rounded corners */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
+/* Customize paragraph text color specifically for the index page */
+.index-text, .container p {
+    color: #000000; /* Change paragraph text color to black */
 }
 
-/* Add extra styles for links, buttons, and other elements for better design */
-a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
+/* Specific styling for index page container (if needed) */
+.index-container {
+    background-color: rgba(255, 255, 255, 0.8);  /* Light background to improve readability of text */
+    color: #000000;  /* Ensure text remains black in containers */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    padding: 40px;
 }
-
-a:hover {
-    color: #ffcc00;  /* A soft yellow color on hover for links */
-}
-/index.md (Main Page)
-_about.md (About Us Page)
-_contact.md (Contact Us Page)
-_assets/
-  /css/
-    style.css  (Custom CSS)
-_config.yml
-# _config.yml
-title: Brew Me Café
-description: "Welcome to Brew Me Café - Exceptional Coffee and Food!"
-baseurl: ""  # Keep this empty if you're using the root domain
-url: "https://brewmecafe.github.io"  # Your GitHub Pages URL
-
-theme: jekyll-theme-cayman  # Or the theme you're using
-sass:
-  style: compressed
-
-# Add custom CSS
-stylesheets:
-  - /assets/css/style.css  # Make sure the file path is correct
-https://github.com/brewmecafe/Brew-Me/blob/62f7eb08e22acdcf93391d2d2b7ffe00df3955cb/Brew%20Me%20caf%C3%A9.png?raw=true
