@@ -4,110 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Online - Brew Me Café</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        .menu-item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 10px 0;
-        }
-        .menu-item input {
-            width: 50px;
-            margin-left: 10px;
-        }
-        .total {
-            font-size: 20px;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-        .order-form {
-            margin-top: 20px;
-        }
-        input, textarea {
-            margin: 5px;
-            padding: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>🛒 Order Online</h1>
-    <p>Select your items and quantities below:</p>
     
-    <form id="orderForm">
-        <div id="menu"></div>
-        <div class="total">Total: <span id="totalPrice">₱0</span></div>
+    <form id="orderForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <h2>Drinks</h2>
+        <label>Espresso (₱120 - ₱150): <input type="number" name="espresso" min="0" value="0"></label><br>
+        <label>Brewed Coffee (₱80 - ₱100): <input type="number" name="brewed_coffee" min="0" value="0"></label><br>
+        <label>Cappuccino (₱150 - ₱180): <input type="number" name="cappuccino" min="0" value="0"></label><br>
+        <label>Latte (₱150 - ₱180): <input type="number" name="latte" min="0" value="0"></label><br>
+        <label>Caramel Macchiato (₱180 - ₱220): <input type="number" name="caramel_macchiato" min="0" value="0"></label><br>
+        <label>Chocolate Shake - Small (₱150), Large (₱250): <input type="number" name="chocolate_shake" min="0" value="0"></label><br>
+        <label>Strawberry Shake - Small (₱160), Large (₱260): <input type="number" name="strawberry_shake" min="0" value="0"></label><br>
+        <label>Vanilla Shake - Small (₱160), Large (₱260): <input type="number" name="vanilla_shake" min="0" value="0"></label><br>
         
-        <div class="order-form">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <input type="tel" name="phone" placeholder="Phone Number" required>
-            <textarea name="requests" placeholder="Special Requests (Optional)"></textarea>
-            <button type="submit">Place Order</button>
-        </div>
+        <h2>Snacks & Meals</h2>
+        <label>Tuna Sandwich (₱130 - ₱160): <input type="number" name="tuna_sandwich" min="0" value="0"></label><br>
+        <label>Egg Sandwich (₱90 - ₱130): <input type="number" name="egg_sandwich" min="0" value="0"></label><br>
+        <label>Grilled Cheese with Fries (₱170 - ₱220): <input type="number" name="grilled_cheese" min="0" value="0"></label><br>
+        <label>Burger with Fries (₱230 - ₱290): <input type="number" name="burger" min="0" value="0"></label><br>
+        
+        <h2>Desserts & Pastas</h2>
+        <label>Waffles (₱50 - ₱100): <input type="number" name="waffles" min="0" value="0"></label><br>
+        <label>Cakes (₱50 - ₱100): <input type="number" name="cakes" min="0" value="0"></label><br>
+        <label>Cookies (₱50 - ₱100): <input type="number" name="cookies" min="0" value="0"></label><br>
+        <label>Nachos (₱50 - ₱100): <input type="number" name="nachos" min="0" value="0"></label><br>
+        <label>Creamy Tuna Pesto Pasta (₱180 - ₱280): <input type="number" name="tuna_pesto" min="0" value="0"></label><br>
+        <label>Classic Carbonara Pasta (₱180 - ₱280): <input type="number" name="carbonara" min="0" value="0"></label><br>
+        <label>Filipino Style Spaghetti (₱180 - ₱280): <input type="number" name="spaghetti" min="0" value="0"></label><br>
+        
+        <h2>Total: <span id="totalPrice">₱0</span></h2>
+        
+        <h3>Customer Details</h3>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="phone" placeholder="Phone Number" required>
+        <textarea name="requests" placeholder="Special Requests (Optional)"></textarea>
+        
+        <button type="submit">Place Order</button>
     </form>
     
     <script>
-        const menuItems = [
-            { name: "Espresso", price: 50 },
-            { name: "Brewed Coffee", price: 60 },
-            { name: "Cappuccino", price: 90 },
-            { name: "Latte", price: 100 },
-            { name: "Burger with Fries", price: 120 },
-            { name: "Creamy Tuna Pesto Pasta", price: 150 },
-            { name: "Blueberry Cheesecake", price: 130 },
-            { name: "Chocolate Muffin", price: 80 }
-        ];
+        const form = document.getElementById('orderForm');
+        const totalPriceEl = document.getElementById('totalPrice');
 
-        const menuContainer = document.getElementById("menu");
-        let totalPrice = 0;
-        
-        menuItems.forEach(item => {
-            const div = document.createElement("div");
-            div.classList.add("menu-item");
-            div.innerHTML = `🍽️ ${item.name} - ₱${item.price} <input type='number' min='0' value='0' data-price='${item.price}' onchange='updateTotal()'>`;
-            menuContainer.appendChild(div);
-        });
-
-        function updateTotal() {
+        form.addEventListener('input', () => {
             let total = 0;
-            document.querySelectorAll(".menu-item input").forEach(input => {
-                total += input.value * input.dataset.price;
-            });
-            document.getElementById("totalPrice").innerText = `₱${total}`;
-        }
-        
-        document.getElementById("orderForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-            const formData = new FormData(this);
-            let orderDetails = "Order Details:\n";
+            const prices = {
+                espresso: [120, 150],
+                brewed_coffee: [80, 100],
+                cappuccino: [150, 180],
+                latte: [150, 180],
+                caramel_macchiato: [180, 220],
+                chocolate_shake: [150, 250],
+                strawberry_shake: [160, 260],
+                vanilla_shake: [160, 260],
+                tuna_sandwich: [130, 160],
+                egg_sandwich: [90, 130],
+                grilled_cheese: [170, 220],
+                burger: [230, 290],
+                waffles: [50, 100],
+                cakes: [50, 100],
+                cookies: [50, 100],
+                nachos: [50, 100],
+                tuna_pesto: [180, 280],
+                carbonara: [180, 280],
+                spaghetti: [180, 280]
+            };
             
-            document.querySelectorAll(".menu-item input").forEach(input => {
-                if (input.value > 0) {
-                    const itemName = input.parentElement.innerText.split("-")[0].trim();
-                    orderDetails += `${itemName}: ${input.value}\n`;
+            for (const item in prices) {
+                const quantity = form[item].value;
+                if (quantity > 0) {
+                    total += prices[item][0] * quantity;
                 }
-            });
-            
-            formData.append("order", orderDetails);
-            formData.append("total", document.getElementById("totalPrice").innerText);
-            
-            fetch("https://formspree.io/f/YOUR_FORM_ID", {
-                method: "POST",
-                body: formData,
-                headers: { "Accept": "application/json" }
-            }).then(response => {
-                if (response.ok) {
-                    alert("Order placed successfully!");
-                    document.getElementById("orderForm").reset();
-                    document.getElementById("totalPrice").innerText = "₱0";
-                } else {
-                    alert("Something went wrong. Please try again.");
-                }
-            });
+            }
+            totalPriceEl.textContent = `₱${total}`;
         });
     </script>
 </body>
