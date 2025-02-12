@@ -76,3 +76,6 @@ You can email us at [info@brewmecafe.com](mailto://brewmecafe00@gmail.com) or vi
 Thank you for your interest in Brew Me Café. We look forward to hearing from you soon!
 
 [Visit About Page](about.html)
+
+
+<a href="https://brewmecafe.github.io/Brew-Me/order.html" class="order-btn">🛒 Order Online</a>
