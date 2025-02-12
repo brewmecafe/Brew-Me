@@ -85,7 +85,7 @@ You can email us at [info@brewmecafe.com](mailto://brewmecafe00@gmail.com) or vi
 
 ## Follow Us:
 - [Facebook Page](https://www.facebook.com/goodshit.page/)
-- [Instagram](#)
+- [Instagram](https://www.instagram.com/justinelee00/)
 
 Thank you for your interest in Brew Me Café. We look forward to hearing from you soon!
 
