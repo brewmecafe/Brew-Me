@@ -53,54 +53,42 @@
 
 Estimated Prices:
 
-1. Tuna Sandwich : PHP 80 to PHP 100 -> Adjusted to local currency context and corrected price range.
-2. Egg Sandwich : PHP 60 to PHP 90 -> Adjusted similarly.
-3. Grilled Cheese with Fries : This typically ranges higher due to the inclusion of fries; estimate around PHP 140 to PHP 170 
-4. Burger with Fries : Generally more expensive than sandwiches; estimate around PHP 190 to PHP 240
+1. Tuna Sandwich : PHP 80 to PHP 100 
+2. Egg Sandwich : PHP 60 to PHP 90
+3. Grilled Cheese with Fries : PHP 140 to PHP 170 
+4. Burger with Fries : PHP 190 to PHP 240
 
 
 1. Tuna Sandwich :
-   Estimated Price Range in Pesos = From approximately PHpP130 To PHpP160
+   Estimated Price Range in Pesos : PHpP130 To PHpP160
 
 2. Egg Sandwich :
-   Estimated Price Range in Pesos = From approximately Php90 To Php130
+   Estimated Price Range in Pesos : Php90 To Php130
 
 3. Grilled Cheese with Fries :
-   Estimated Price Range in Pesos = From approximately Php170 To Php220
+   Estimated Price Range in Pesos : Php170 To Php220
 
 4. Burger with Fries :
-   Estimated Price Range in Pesos = From approximately Php230 To Php290
+   Estimated Price Range in Pesos : Php230 To Php290
 
 
-### Desserts & Pastas
 
-1.Waffles,
-2.Cakes,
-3.Cookies,
-4.Nachos,
-5.Creamy Tuna Pesto Pasta,
-6.Classic Carbonara Pasta,
-7.Filipino Style Spaghetti,
-
-Estimated Prices:
-
-Desserts generally fall between php50-php100 per item depending on size and complexity.
-
-Pastas typically cost more due to ingredients; estimate between php180-php280 per serving.
-
-
-Finalized Text:
 
 
 ### Desserts & Pastas
 
 1.Waffles,
+
 2.Cakes,
+
 3.Cookies,
+
 4.Nachos,
 
 5.Creamy Tuna Pesto Pasta,
+
 6.Classic Carbonara Pasta,
+
 7.Filipino Style Spaghetti,
 
 Estimated Prices:
@@ -119,15 +107,15 @@ Finalized Menu:
 ## Drinks
 
 
-* Expresso : php120-php150  
-* Brewed Coffee : php80-php100  
-* Cappuccino : php150-php180  
-* Latte : php150-php180  
-* Caramel Macchiato : php180-php220  
+* Expresso : Php 120 - Php150  
+* Brewed Coffee : Php80 - Php100  
+* Cappuccino : Php150 - Php180  
+* Latte : Php150 - Php180  
+* Caramel Macchiato : Php180 - Php220  
 * Frappe / Shake / Cooler Options :
 
 Chocolate Shake :
-+Small(12oz)php150,Large(20oz)php250  
+Small(12oz) Php150, Large(20oz) Php250  
 
 Other Flavors Similarly Priced.
 
@@ -142,10 +130,10 @@ Other Flavors Similarly Priced.
 Tuna / Egg / Grilled Cheese / BurgerwithFries:
 
 
-Tuna sandwich Php 130 - PHP 160,Eggsandwich Php 90 -PHP 130,
+Tuna sandwich Php 130 - PHP 160, Eggsandwich Php 90 - PHP 130,
 
 
-Grilled Cheese With Fries Php 170 - PHP 220 ,Burger With Fries Php 230 - PHP 290
+Grilled Cheese With Fries Php 170 - PHP 220, Burger With Fries Php 230 - PHP 290
 
 
 
@@ -155,5 +143,5 @@ Grilled Cheese With Fries Php 170 - PHP 220 ,Burger With Fries Php 230 - PHP 290
 Waffle, Cake, Cookie, Nacho Prices Range From Php 50 to Php 100 Depending On Size,
 
 
-Creamy Tunapesto/ Classic Carbonara / Filipino style spaghetti Price Range From Php 180 to Php 280 Per Serving.
+Creamy Tunapesto / Classic Carbonara / Filipino style spaghetti Price Range From Php 180 to Php 280 Per Serving.
 
