@@ -36,3 +36,24 @@ git push origin main
 .order-btn:hover {
     background-color: #ff4500;
 }
+
+body {
+    background-image: url('path-to-your-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.order-page {
+    background-image: url('path-to-your-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px;
+}
+<div class="order-page">
+    <h1>Online Ordering</h1>
+</div>
+body {
+    background-image: url('https://brewmecafe.github.io/Brew-Me/images/background.jpg');
+}
+
