@@ -63,10 +63,6 @@ Visit us today, and experience the Brew Me Café difference!
 [Contact Us](contact.html)
 
 ---
-layout: page
-title: Contact Us
-permalink: /contact/
----
 
 # Get in Touch!
 
