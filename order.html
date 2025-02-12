@@ -4,44 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Online - Brew Me Café</title>
-    <link rel="stylesheet" href="styles.css">
-    <script>
-        function updateTotal() {
-            let total = 0;
-            document.querySelectorAll('.menu-item').forEach(item => {
-                const price = parseFloat(item.dataset.price);
-                const quantity = parseInt(item.value) || 0;
-                total += price * quantity;
-            });
-            document.getElementById('total-price').innerText = `₱${total}`;
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
         }
-    </script>
+        .menu-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+        }
+        .menu-item input {
+            width: 50px;
+            margin-left: 10px;
+        }
+        .total {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .order-form {
+            margin-top: 20px;
+        }
+        input, textarea {
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
 </head>
 <body>
     <h1>🛒 Order Online</h1>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <div>
-            <label>☕ Espresso - ₱50</label>
-            <input type="number" class="menu-item" name="Espresso" data-price="50" min="0" value="0" onchange="updateTotal()">
+    <p>Select your items and quantities below:</p>
+    
+    <form id="orderForm">
+        <div id="menu"></div>
+        <div class="total">Total: <span id="totalPrice">₱0</span></div>
+        
+        <div class="order-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <textarea name="requests" placeholder="Special Requests (Optional)"></textarea>
+            <button type="submit">Place Order</button>
         </div>
-        <div>
-            <label>☕ Brewed Coffee - ₱60</label>
-            <input type="number" class="menu-item" name="Brewed Coffee" data-price="60" min="0" value="0" onchange="updateTotal()">
-        </div>
-        <div>
-            <label>🍔 Burger with Fries - ₱120</label>
-            <input type="number" class="menu-item" name="Burger with Fries" data-price="120" min="0" value="0" onchange="updateTotal()">
-        </div>
-        <div>
-            <label>🍝 Creamy Tuna Pesto Pasta - ₱150</label>
-            <input type="number" class="menu-item" name="Creamy Tuna Pesto Pasta" data-price="150" min="0" value="0" onchange="updateTotal()">
-        </div>
-        <h2>Total: <span id="total-price">₱0</span></h2>
-        <input type="text" name="Name" placeholder="Your Name" required>
-        <input type="email" name="Email" placeholder="Your Email" required>
-        <input type="text" name="Phone" placeholder="Phone Number" required>
-        <textarea name="Special Requests" placeholder="Special Requests (Optional)"></textarea>
-        <button type="submit">Place Order</button>
     </form>
+    
+    <script>
+        const menuItems = [
+            { name: "Espresso", price: 50 },
+            { name: "Brewed Coffee", price: 60 },
+            { name: "Cappuccino", price: 90 },
+            { name: "Latte", price: 100 },
+            { name: "Burger with Fries", price: 120 },
+            { name: "Creamy Tuna Pesto Pasta", price: 150 },
+            { name: "Blueberry Cheesecake", price: 130 },
+            { name: "Chocolate Muffin", price: 80 }
+        ];
+
+        const menuContainer = document.getElementById("menu");
+        let totalPrice = 0;
+        
+        menuItems.forEach(item => {
+            const div = document.createElement("div");
+            div.classList.add("menu-item");
+            div.innerHTML = `🍽️ ${item.name} - ₱${item.price} <input type='number' min='0' value='0' data-price='${item.price}' onchange='updateTotal()'>`;
+            menuContainer.appendChild(div);
+        });
+
+        function updateTotal() {
+            let total = 0;
+            document.querySelectorAll(".menu-item input").forEach(input => {
+                total += input.value * input.dataset.price;
+            });
+            document.getElementById("totalPrice").innerText = `₱${total}`;
+        }
+        
+        document.getElementById("orderForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+            let orderDetails = "Order Details:\n";
+            
+            document.querySelectorAll(".menu-item input").forEach(input => {
+                if (input.value > 0) {
+                    const itemName = input.parentElement.innerText.split("-")[0].trim();
+                    orderDetails += `${itemName}: ${input.value}\n`;
+                }
+            });
+            
+            formData.append("order", orderDetails);
+            formData.append("total", document.getElementById("totalPrice").innerText);
+            
+            fetch("https://formspree.io/f/YOUR_FORM_ID", {
+                method: "POST",
+                body: formData,
+                headers: { "Accept": "application/json" }
+            }).then(response => {
+                if (response.ok) {
+                    alert("Order placed successfully!");
+                    document.getElementById("orderForm").reset();
+                    document.getElementById("totalPrice").innerText = "₱0";
+                } else {
+                    alert("Something went wrong. Please try again.");
+                }
+            });
+        });
+    </script>
 </body>
 </html>
