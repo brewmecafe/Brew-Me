@@ -3,119 +3,655 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brew-Me Online Ordering</title>
-    <script>
-        function updateTotal() {
-            let total = 0;
-            document.querySelectorAll('.menu-item').forEach(item => {
-                let basePrice = parseInt(item.dataset.price);
-                let toppingPrice = parseInt(item.querySelector('select').value) || 0;
-                let quantity = parseInt(item.querySelector('input').value) || 0;
-                total += (basePrice + toppingPrice) * quantity;
-            });
-            document.getElementById('totalPrice').innerText = "₱" + total;
+    <title>Online Ordering</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
         }
-    </script>
+        
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            text-align: center;
+        }
+        
+        .menu-section {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        input[type="checkbox"], input[type="radio"] {
+            margin-right: 5px;
+        }
+        
+        select {
+            width: 100%;
+            height: auto; /* Adjust as needed */
+            
+          /* Add some basic styling to the dropdown */
+          padding-top :4pt; 
+          padding-bottom :4pt; 
+          font-size :12pt; 
+          color:#000000 ;  
+            
+           /* Optional - Add a background image to the dropdown arrow */
+           background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='5 -3.7' width='16' height='16'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.1%2012a%201%201%200110-2H4a1%201%20001-2h10a1%201%2001102z'%3E%3C/path/%3E%3C/svg>");
+           background-position:right center ;
+           background-repeat:no-repeat ;
+           border-radius :8pt ;  
+           border-style:solid ;  
+           border-width :thin ;  
+           cursor:pointer ;
+       }
+
+       button[type="submit"]{
+         width:auto !important;   
+         min-height:auto !important;   
+         display:block !important;   
+         text-align:center !important;   
+         white-space:normal !important;
+
+       }
+
+       button{
+         cursor:pointer;
+
+       }
+
+    </style>
+
 </head>
+
 <body>
-    <h1>Brew-Me Online Ordering</h1>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <div class="category">
-            <h2>Drinks</h2>
-            <div class="menu-item" data-price="120">
-                <label>Espresso (₱120 - ₱150)</label>
-                <input type="number" name="espresso_qty" value="0" min="0" onchange="updateTotal()">
-                <select name="espresso_topping" onchange="updateTotal()">
-                    <option value="0">No Toppings</option>
-                    <option value="30">Extra Shot (₱30)</option>
-                    <option value="20">Whipped Cream (₱20)</option>
-                </select>
-            </div>
-            <div class="menu-item" data-price="80">
-                <label>Brewed Coffee (₱80 - ₱100)</label>
-                <input type="number" name="brewed_coffee_qty" value="0" min="0" onchange="updateTotal()">
-                <select name="brewed_coffee_topping" onchange="updateTotal()">
-                    <option value="0">No Toppings</option>
-                    <option value="30">Extra Shot (₱30)</option>
-                </select>
-            </div>
-            <div class="menu-item" data-price="150">
-                <label>Cappuccino (₱150 - ₱180)</label>
-                <input type="number" name="cappuccino_qty" value="0" min="0" onchange="updateTotal()">
-                <select name="cappuccino_topping" onchange="updateTotal()">
-                    <option value="0">No Toppings</option>
-                    <option value="20">Caramel Drizzle (₱20)</option>
-                </select>
-            </div>
-            <div class="menu-item" data-price="180">
-                <label>Caramel Macchiato (₱180 - ₱220)</label>
-                <input type="number" name="caramel_macchiato_qty" value="0" min="0" onchange="updateTotal()">
-                <select name="caramel_macchiato_topping" onchange="updateTotal()">
-                    <option value="0">No Toppings</option>
-                    <option value="30">Extra Caramel (₱30)</option>
-                </select>
-            </div>
-            <div class="menu-item" data-price="200">
-                <label>Frappe (₱200 - ₱250)</label>
-                <input type="number" name="frappe_qty" value="0" min="0" onchange="updateTotal()">
-                <select name="frappe_topping" onchange="updateTotal()">
-                    <option value="0">No Toppings</option>
-                    <option value="30">Chocolate Chips (₱30)</option>
-                </select>
-            </div>
-            <div class="menu-item" data-price="150">
-                <label>Chocolate Shake Small (₱150) / Large (₱250)</label>
-                <input type="number" name="chocolate_shake_qty" value="0" min="0" onchange="updateTotal()">
-                <select name="chocolate_shake_topping" onchange="updateTotal()">
-                    <option value="0">No Toppings</option>
-                    <option value="30">Extra Chocolate (₱30)</option>
-                </select>
-            </div>
-        </div>
 
-        <div class="category">
-            <h2>Snacks & Meals</h2>
-            <div class="menu-item" data-price="130">
-                <label>Tuna Sandwich (₱130 - ₱160)</label>
-                <input type="number" name="tuna_sandwich_qty" value="0" min="0" onchange="updateTotal()">
-                <select name="tuna_sandwich_topping" onchange="updateTotal()">
-                    <option value="0">No Toppings</option>
-                    <option value="30">Extra Tuna (₱30)</option>
-                </select>
-            </div>
-            <div class="menu-item" data-price="230">
-                <label>Burger with Fries (₱230 - ₱290)</label>
-                <input type="number" name="burger_qty" value="0" min="0" onchange="updateTotal()">
-                <select name="burger_topping" onchange="updateTotal()">
-                    <option value="0">No Toppings</option>
-                    <option value="40">Extra Patty (₱40)</option>
-                    <option value="20">Cheese (₱20)</option>
-                </select>
-            </div>
-        </div>
+<div class="container">
 
-        <div class="category">
-            <h2>Desserts & Pastas</h2>
-            <div class="menu-item" data-price="50">
-                <label>Waffles (₱50 - ₱100)</label>
-                <input type="number" name="waffles_qty" value="0" min="0" onchange="updateTotal()">
-                <select name="waffles_topping" onchange="updateTotal()">
-                    <option value="0">No Toppings</option>
-                    <option value="20">Chocolate Syrup (₱20)</option>
-                </select>
-            </div>
-            <div class="menu-item" data-price="180">
-                <label>Classic Carbonara (₱180 - ₱280)</label>
-                <input type="number" name="carbonara_qty" value="0" min="0" onchange="updateTotal()">
-                <select name="carbonara_topping" onchange="updateTotal()">
-                    <option value="0">No Toppings</option>
-                    <option value="40">Extra Cheese (₱40)</option>
-                </select>
-            </div>
-        </div>
+<h2>Order Now!</h2>
 
-        <h2>Total Price: <span id="totalPrice">₱0</span></h2>
-        <button type="submit">Place Order</button>
-    </form>
-</body>
-</html>
+<form id="orderForm">
+
+<!-- Drinks Section -->
+<div class="menu-section">
+<h3>Drinks</h3>
+<label><input type="radio" name="drink" value="Expresso"> Expresso (₱120 - ₱150)</label>
+<label><input type="radio" name="drink" value="Brewed Coffee"> Brewed Coffee (₱80 - ₱100)</label>
+<label><input type="radio" name="drink" value="Cappuccino"> Cappuccino (₱150 - ₱180)</label>
+<label><input type="radio" name="drink" value=""> Latte (₱150 - ₱180)</label>
+<label><input type="" radio""="" name="" drink""="" value=""> Caramel Macchiato (₱180 - ₱220)</label>
+
+<select id = "frappeOptions">
+<option selected disabled hidden >Select Frappe/Shake/Cooler Options:</option>    
+<option >Chocolate Shake Small (12oz) Php150</option>    
+<option >Chocolate Shake Large (20oz) Php250</option>    
+<option >Strawberry Shake Small Php160</option>    
+<option >Strawberry Shake Large Php260</option>    
+<option >Vanilla Shake Small Php160</option>    
+<option >Vanilla Shake Large Php260</option></select>
+
+
+<!-- Toppings for Drinks -->
+<p>Toppings:</p>
+<input type = "checkbox"> Whipped Cream
+<input type = "checkbox"> Extra Shot of Espresso
+
+<br/>
+
+<!-- Snacks & Meals Section -->
+<div class = "menu-section"><br/>
+<h4>Sandwiches/Burgers:</h4>
+
+<select id = "sandwichOptions">
+   <option selected disabled hidden>Select Sandwich/Burger Options:</option >
+   <option>Tuna Sandwich PHP130-PHP160 </ option >
+   <option>Egg Sandwich PHP90-PHP130 </ option >
+   <option Grilled Cheese with Fries PHP170-PHP220></ option >
+   < option>Burger with Fries PHP230-PHP290></ option ></select>
+
+
+<!-- Toppings for Snacks & Meals -->
+<p>Add-Ons/Toppings:</p>
+
+<input type = "checkbox"> Lettuce
+<input type = "checkbox"> Tomato
+<input type = "checkbox"> Cheese
+
+<br/>
+
+<!-- Desserts & Pastas Section -->
+<div class =" menu-section ">< br />
+<h5>Desserts/Pastas/Waffles/Cakes/Cookies/Nachos/Pasta Options :</ h5 >
+
+<select id ="dessertPastaOptions ">
+< opti on sele cted dis abled hid den>Select Dessert/Pasta/Waffle/Cake/Cookie/Nacho Option :</ opti on >
+< opti on Waff le php50-php100 ></ opti on >
+< opti on Cake php50-php100 ></ opti on >
+< opti on Cook ie php50-php100 ></ opti on >
+<opt ion Nach os php50-php100 ></opt ion >
+
+<opt ion Cream y Tun a Pesto Pasta php180-php280 per serving></opt ion >
+
+[opt ion Class ic Carbonara Pasta php180-php280 per serving]</opt ion >
+
+[opt i o n Fil ip in o St yle Spaghetti php180-php280 per serving]</opt i o n >< /selec t>
+
+
+<button style= 'background-color:#007bff;color:white;padding-top:.375rem;padding-right:.75rem;padding-bottom:.375rem;padding-left:.75rem;border-radius:.25rem;'type =" submit ">Place Order!</button>
+
+
+<br/>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script><!-- SweetAlert Library -->
+
+<script>// Example script to handle form submission and show alert using SweetAlert library.
+document.getElementById('orderForm').addEventListener('submit', function(e){
+e.preventDefault();
+Swal.fire({
+icon:'success',
+title:'Order Placed Successfully!',
+text:'Thank you for your order.'
+});
+});
+// You can customize this script further based on your backend requirements.
+// This example just shows how you might handle form submission and display an alert.
+// For actual functionality like sending data to server or database,
+// consider integrating it with backend technologies like Node.js or Python Flask/Django.
+
+});
+
+
+
+
+}
+
+
+
+
+
+
+
+}
+}
+}
+
+
+
+
+
+
+}}
+
+
+}
+
+
+
+
+
+
+}
+} 
+
+}
+
+
+}) 
+
+
+
+
+
+
+})
+})
+
+
+
+
+
+}) 
+
+
+
+
+})
+
+
+
+
+
+
+
+})
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}</script>
+
+
+
+
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+ 
+ 
+
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+ 
+  
+
+  
+
+  
+
+
+  
+
+
+ 
+  
+     
+     
+     
+     
+     
+     
+     
+    
+      
+       
+       
+       
+       
+       
+       
+      
+    
+
+
+
+
+
+
+ 
+    
+    
+
+ 
+    
+    
+
+ 
+    
+     
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+ 
+ 
+  
+  
+
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+   
+    
+      
+     
+        
+         
+          
+           
+             
+             
+             
+             
+             
+             
+             
+            
+            
+            
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+ 
+  
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+   
+   
+   
+   
+   
+   
+    
+    
+
+
+
+
+
+
+
+   
+    
+    
+    
+
+ 
+    
+    
+
+ 
+    
+     
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+ 
+ 
+  
+  
+
+
+  
+  
+      
+          
+           
+             
+            
+            
+            
+
+
+
+
+  
+  
+
+
+ 
+  
+   
+    
+      
+         
+          
+           
+             
+            
+            
+            
+
+
+
+
+  
+  
+
+
+ 
+  
+   
+    
+      
+         
+          
+           
+             
+            
+            
+            
+
+
+
+
+  
+  
+
+
+ 
+  
+   
+    
+      
+         
+          
+           
+             
+            
+            
+            
+
+
+
+
+  
+  
+
+
+ 
+  
+   
+    
+      
+         
+          
+           
+             
+            
+            
+            
+
+
+
+
+  
+  
+
+
+ 
+ <!--<div style ='display:flex'>
+<img src ='https://example.com/image.jpg'>
+<img src ='https://example.com/image.jpg'>
+<img src ='https://example.com/image.jpg'></div>-->
+ <!--Add images here if needed-->
+
+ <!--You can also add more sections or modify existing ones as required.-->
+
+
+
+
+
+
+ <!--End of container-->
+
+
+
+ <!--End of body-->
+
+
+
+ <!--End of html-->
+
+
+
+
+ </form><!-- End of Form -->
+
+
+
+
+ </div><!-- End of Container -->
+
+
+
+
+
+
+
+
+ </body><!-- End Body -->
+
+ </html><!-- End HTML -->
+
+
