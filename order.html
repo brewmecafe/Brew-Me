@@ -3,88 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brew Me Café - Online Ordering</title>
+    <title>Order Online - Brew Me Café</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function updateTotal() {
+            let total = 0;
+            document.querySelectorAll('.menu-item').forEach(item => {
+                const price = parseFloat(item.dataset.price);
+                const quantity = parseInt(item.value) || 0;
+                total += price * quantity;
+            });
+            document.getElementById('total-price').innerText = `₱${total}`;
+        }
+    </script>
 </head>
 <body>
-    <div class="container">
-        <h1><img src="cart-icon.png" alt="Cart Icon"> Order Online</h1>
-        <p>Select your items and quantities below:</p>
-        
-        <form id="orderForm">
-            <div class="menu-category">
-                <h2>Drinks</h2>
-                <label>Espresso - ₱120</label>
-                <input type="number" name="espresso" min="0" value="0"><br>
-                
-                <label>Brewed Coffee - ₱80</label>
-                <input type="number" name="brewed_coffee" min="0" value="0"><br>
-                
-                <label>Cappuccino - ₱150</label>
-                <input type="number" name="cappuccino" min="0" value="0"><br>
-                
-                <label>Latte - ₱150</label>
-                <input type="number" name="latte" min="0" value="0"><br>
-                
-                <label>Caramel Macchiato - ₱180</label>
-                <input type="number" name="caramel_macchiato" min="0" value="0"><br>
-                
-                <label>Frappe - ₱200</label>
-                <input type="number" name="frappe" min="0" value="0"><br>
-                
-                <label>Shakes (Chocolate, Strawberry, Vanilla) - ₱150</label>
-                <input type="number" name="shakes" min="0" value="0"><br>
-            </div>
-            
-            <div class="menu-category">
-                <h2>Snacks & Meals</h2>
-                <label>Tuna Sandwich - ₱130</label>
-                <input type="number" name="tuna_sandwich" min="0" value="0"><br>
-                
-                <label>Egg Sandwich - ₱90</label>
-                <input type="number" name="egg_sandwich" min="0" value="0"><br>
-                
-                <label>Grilled Cheese with Fries - ₱170</label>
-                <input type="number" name="grilled_cheese" min="0" value="0"><br>
-                
-                <label>Burger with Fries - ₱200</label>
-                <input type="number" name="burger_fries" min="0" value="0"><br>
-            </div>
-            
-            <h3>Total: <span id="totalPrice">₱0</span></h3>
-            
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <input type="tel" name="phone" placeholder="Phone Number" required>
-            <textarea name="special_requests" placeholder="Special Requests (Optional)"></textarea>
-            
-            <button type="submit">Submit Order</button>
-        </form>
-    </div>
-    
-    <script>
-        document.getElementById('orderForm').addEventListener('input', function() {
-            let total = 0;
-            const prices = {
-                espresso: 120,
-                brewed_coffee: 80,
-                cappuccino: 150,
-                latte: 150,
-                caramel_macchiato: 180,
-                frappe: 200,
-                shakes: 150,
-                tuna_sandwich: 130,
-                egg_sandwich: 90,
-                grilled_cheese: 170,
-                burger_fries: 200
-            };
-            
-            for (let item in prices) {
-                let qty = document.querySelector(`[name="${item}"]`).value;
-                total += qty * prices[item];
-            }
-            document.getElementById('totalPrice').innerText = `₱${total}`;
-        });
-    </script>
+    <h1>🛒 Order Online</h1>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div>
+            <label>☕ Espresso - ₱50</label>
+            <input type="number" class="menu-item" name="Espresso" data-price="50" min="0" value="0" onchange="updateTotal()">
+        </div>
+        <div>
+            <label>☕ Brewed Coffee - ₱60</label>
+            <input type="number" class="menu-item" name="Brewed Coffee" data-price="60" min="0" value="0" onchange="updateTotal()">
+        </div>
+        <div>
+            <label>🍔 Burger with Fries - ₱120</label>
+            <input type="number" class="menu-item" name="Burger with Fries" data-price="120" min="0" value="0" onchange="updateTotal()">
+        </div>
+        <div>
+            <label>🍝 Creamy Tuna Pesto Pasta - ₱150</label>
+            <input type="number" class="menu-item" name="Creamy Tuna Pesto Pasta" data-price="150" min="0" value="0" onchange="updateTotal()">
+        </div>
+        <h2>Total: <span id="total-price">₱0</span></h2>
+        <input type="text" name="Name" placeholder="Your Name" required>
+        <input type="email" name="Email" placeholder="Your Email" required>
+        <input type="text" name="Phone" placeholder="Phone Number" required>
+        <textarea name="Special Requests" placeholder="Special Requests (Optional)"></textarea>
+        <button type="submit">Place Order</button>
+    </form>
 </body>
 </html>
