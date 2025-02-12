@@ -24,7 +24,7 @@ Visit us today, and experience the Brew Me Café difference!
 title: Brew Me Café
 description: "Welcome to Brew Me Café - Exceptional Coffee and Food!"
 baseurl: "" # Add baseurl if using subfolders, e.g., "/my-site"
-url: "https://your-github-pages-url.com"
+url: "https://brewmecafe.github.io/Brew-Me/"
 
 markdown: kramdown
 theme: jekyll-theme-cayman  # or your selected theme
