@@ -18,3 +18,20 @@ Our mission is to serve you the perfect cup of coffee, along with an array of mo
 Visit us today, and experience the Brew Me Café difference!
 
 [Contact Us](contact.html)
+
+# _config.yml
+
+title: Brew Me Café
+description: "Welcome to Brew Me Café - Exceptional Coffee and Food!"
+baseurl: "" # Add baseurl if using subfolders, e.g., "/my-site"
+url: "https://your-github-pages-url.com"
+
+markdown: kramdown
+theme: jekyll-theme-cayman  # or your selected theme
+
+[About Us](/about/)
+
+/index.md (Main Page)
+about.md (About Us Page)
+contact.md (Contact Us Page)
+_config.yml
