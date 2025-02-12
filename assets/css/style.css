@@ -16,10 +16,10 @@ body::before {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    opacity: 0.7; /* 85% opacity */
+    opacity: 0.85; /* Set opacity to 85% */
     z-index: -1;
 }
 
 git add assets/css/style.css
-git commit -m "Added opacity to background image using pseudo-element"
+git commit -m "Increased background opacity to 85%"
 git push origin main
