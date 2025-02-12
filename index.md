@@ -12,25 +12,26 @@ We are thrilled to have you join us! Our cozy café is dedicated to providing yo
 
 ### Specialty Drinks
 Enjoy our selection of specialty drinks:
-- **Expresso**
-- **Brewed Coffee**
-- **Cappuccino**
-- **Latte**
-- **Caramel Macchiato**
-- **Frappe**
-- **Shakes**, and
-- **Coolers**
+- [**Espresso**](images/espresso.jpg)
+- [**Brewed Coffee**](images/brewed-coffee.jpg)
+- [**Cappuccino**](images/cappuccino.jpg)
+- [**Latte**](images/latte.jpg)
+- [**Caramel Macchiato**](images/caramel-macchiato.jpg)
+- [**Frappe**](images/frappe.jpg)
+- [**Shakes**](images/shakes.jpg)
+- [**Coolers**](images/coolers.jpg)
 
 ### Snacks & Food
 Indulge in our tasty snacks made with the freshest ingredients:
-- Tuna Sandwich
-- Egg Sandwich
-- Grilled Cheese with Fries
-- Burger with Fries
-- Waffles, Cakes, Cookies, Nachos
-- Creamy Tuna Pesto Pasta
-- Classic Carbonara Pasta
-- Filipino Style Spaghetti
+- [Tuna Sandwich](images/tuna-sandwich.jpg)
+- [Egg Sandwich](images/egg-sandwich.jpg)
+- [Grilled Cheese with Fries](images/grilled-cheese.jpg)
+- [Burger with Fries](images/burger.jpg)
+- [Waffles, Cakes, Cookies, Nachos](images/desserts.jpg)
+- [Creamy Tuna Pesto Pasta](images/tuna-pesto.jpg)
+- [Classic Carbonara Pasta](images/carbonara.jpg)
+- [Filipino Style Spaghetti](images/spaghetti.jpg)
+
 
 ## Why Choose Us?
 
