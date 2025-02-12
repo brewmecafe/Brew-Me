@@ -12,26 +12,25 @@ We are thrilled to have you join us! Our cozy café is dedicated to providing yo
 
 ### Specialty Drinks
 Enjoy our selection of specialty drinks:
-- [**Espresso**](images/espresso.jpg)
-- [**Brewed Coffee**](images/brewed-coffee.jpg)
-- [**Cappuccino**](images/cappuccino.jpg)
-- [**Latte**](images/latte.jpg)
-- [**Caramel Macchiato**](images/caramel-macchiato.jpg)
-- [**Frappe**](images/frappe.jpg)
-- [**Shakes**](images/shakes.jpg)
-- [**Coolers**](images/coolers.jpg)
+- **Expresso**
+- **Brewed Coffee**
+- **Cappuccino**
+- **Latte**
+- **Caramel Macchiato**
+- **Frappe**
+- **Shakes**, and
+- **Coolers**
 
 ### Snacks & Food
 Indulge in our tasty snacks made with the freshest ingredients:
-- [Tuna Sandwich](images/tuna-sandwich.jpg)
-- [Egg Sandwich](images/egg-sandwich.jpg)
-- [Grilled Cheese with Fries](images/grilled-cheese.jpg)
-- [Burger with Fries](images/burger.jpg)
-- [Waffles, Cakes, Cookies, Nachos](images/desserts.jpg)
-- [Creamy Tuna Pesto Pasta](images/tuna-pesto.jpg)
-- [Classic Carbonara Pasta](images/carbonara.jpg)
-- [Filipino Style Spaghetti](images/spaghetti.jpg)
-
+- Tuna Sandwich
+- Egg Sandwich
+- Grilled Cheese with Fries
+- Burger with Fries
+- Waffles, Cakes, Cookies, Nachos
+- Creamy Tuna Pesto Pasta
+- Classic Carbonara Pasta
+- Filipino Style Spaghetti
 
 ## Why Choose Us?
 
@@ -58,7 +57,6 @@ Our mission is to serve you the perfect cup of coffee, along with an array of mo
 - **Fresh Ingredients**: We only use the best and freshest ingredients to create delicious meals and drinks.
 - **Warm Hospitality**: We treat every guest like family, ensuring a welcoming atmosphere for everyone.
 - **Creative Menu**: Our menu is diverse, with a range of drinks, snacks, and meals that cater to all tastes and preferences.
-
 Visit us today, and experience the Brew Me Café difference!
 
 [Contact Us](contact.html)
