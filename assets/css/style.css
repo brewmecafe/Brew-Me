@@ -1,27 +1,28 @@
+background-image: url('https://raw.githubusercontent.com/brewmecafe/Brew-Me/62f7eb08e22acdcf93391d2d2b7ffe00df3955cb/Brew%20Me%20caf%C3%A9.png');
 /* style.css */
 
 /* Set the background image */
 body {
-    background-image: url('/assets/images/Brew%20Me%20café.png');  /* Correct path */
+    background-image: url('https://raw.githubusercontent.com/brewmecafe/Brew-Me/62f7eb08e22acdcf93391d2d2b7ffe00df3955cb/Brew%20Me%20caf%C3%A9.png');  /* Raw URL for background image */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    color: #000000;  /* Change default text color to black */
+    color: #000000;  /* Change text color to black */
     font-family: Arial, sans-serif;
 }
 
-/* Customize text color for headings on index page */
+/* Customize headings */
 h1, h2, h3 {
     color: #000000; /* Change headings to black */
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);  /* Add a subtle shadow to improve readability */
 }
 
-/* Customize paragraph text color specifically for the index page */
+/* Customize text color for index page */
 .index-text, .container p {
     color: #000000; /* Change paragraph text color to black */
 }
 
-/* Specific styling for index page container (if needed) */
+/* Specific styling for index page container */
 .index-container {
     background-color: rgba(255, 255, 255, 0.8);  /* Light background to improve readability of text */
     color: #000000;  /* Ensure text remains black in containers */
@@ -29,3 +30,6 @@ h1, h2, h3 {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     padding: 40px;
 }
+git add assets/css/style.css
+git commit -m "Fixed background image path to raw URL"
+git push origin main
