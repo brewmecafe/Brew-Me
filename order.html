@@ -96,7 +96,7 @@
       <div class="menu-item">
         <div>
           <h3>Expresso</h3>
-          <p>₱120 - ₱150</p>
+          <p>₱120</p>
         </div>
         <div>
           <label for="expresso-qty">Quantity:</label>
@@ -106,7 +106,7 @@
       <div class="menu-item">
         <div>
           <h3>Brewed Coffee</h3>
-          <p>₱80 - ₱100</p>
+          <p>₱100</p>
         </div>
         <div>
           <label for="brewed-coffee-qty">Quantity:</label>
@@ -116,7 +116,7 @@
       <div class="menu-item">
         <div>
           <h3>Cappuccino</h3>
-          <p>₱150 - ₱180</p>
+          <p>₱150</p>
         </div>
         <div>
           <label for="cappuccino-qty">Quantity:</label>
@@ -126,7 +126,7 @@
       <div class="menu-item">
         <div>
           <h3>Latte</h3>
-          <p>₱150 - ₱180</p>
+          <p>₱150</p>
         </div>
         <div>
           <label for="latte-qty">Quantity:</label>
@@ -136,7 +136,7 @@
       <div class="menu-item">
         <div>
           <h3>Caramel Macchiato</h3>
-          <p>₱180 - ₱220</p>
+          <p>₱180</p>
         </div>
         <div>
           <label for="caramel-macchiato-qty">Quantity:</label>
@@ -146,7 +146,7 @@
       <div class="menu-item">
         <div>
           <h3>Frappe</h3>
-          <p>₱200 - ₱250</p>
+          <p>₱200</p>
         </div>
         <div>
           <label for="frappe-qty">Quantity:</label>
@@ -161,7 +161,12 @@
       <div class="menu-item">
         <div>
           <h3>Chocolate Shake</h3>
-          <p>Small: ₱150, Large: ₱250</p>
+          <p>Small: ₱150</p>
+          <div class="add-ons">
+            <label><input type="checkbox" name="chocolate-add-ons" value="whipped-cream"> Whipped Cream (+₱20)</label>
+            <label><input type="checkbox" name="chocolate-add-ons" value="choco-chips"> Chocolate Chips (+₱30)</label>
+              <h3>Chocolate Shake</h3>
+          <p>Large: ₱250</p>
           <div class="add-ons">
             <label><input type="checkbox" name="chocolate-add-ons" value="whipped-cream"> Whipped Cream (+₱20)</label>
             <label><input type="checkbox" name="chocolate-add-ons" value="choco-chips"> Chocolate Chips (+₱30)</label>
@@ -175,7 +180,11 @@
       <div class="menu-item">
         <div>
           <h3>Strawberry Shake</h3>
-          <p>Small: ₱160, Large: ₱260</p>
+          <p>Small: ₱160</p>
+          <div class="add-ons">
+            <label><input type="checkbox" name="strawberry-add-ons" value="whipped-cream"> Whipped Cream (+₱20)</label>
+            <label><input type="checkbox" name="strawberry-add-ons" value="sprinkles"> Sprinkles (+₱30)</label>
+            <p>Large: ₱260</p>
           <div class="add-ons">
             <label><input type="checkbox" name="strawberry-add-ons" value="whipped-cream"> Whipped Cream (+₱20)</label>
             <label><input type="checkbox" name="strawberry-add-ons" value="sprinkles"> Sprinkles (+₱30)</label>
@@ -189,10 +198,15 @@
       <div class="menu-item">
         <div>
           <h3>Vanilla Shake</h3>
-          <p>Small: ₱150, Large: ₱250</p>
+          <p>Small: ₱150,</p>
           <div class="add-ons">
             <label><input type="checkbox" name="vanilla-add-ons" value="whipped-cream"> Whipped Cream (+₱20)</label>
             <label><input type="checkbox" name="vanilla-add-ons" value="caramel-syrup"> Caramel Syrup (+₱30)</label>
+             <p>Large: ₱250</p>
+          <div class="add-ons">
+            <label><input type="checkbox" name="vanilla-add-ons" value="whipped-cream"> Whipped Cream (+₱20)</label>
+            <label><input type="checkbox" name="vanilla-add-ons" value="caramel-syrup"> Caramel Syrup (+₱30)</label>
+          </div>
           </div>
         </div>
         <div>
@@ -389,6 +403,20 @@
         { name: 'Waffles', qty: document.getElementById('waffles-qty').value, price: 50 },
       ];
 
+      <script>
+    // Function to update the order summary
+    function updateOrderSummary() {
+      const orderList = document.getElementById('order-list');
+      orderList.innerHTML = '';
+
+      // Example: Add items to the order summary
+      const items = [
+        { name: 'Expresso', qty: document.getElementById('expresso-qty').value, price: 120 },
+        { name: 'Chocolate Shake', qty: document.getElementById('chocolate-shake-qty').value, price: 150 },
+        { name: 'Tuna Sandwich', qty: document.getElementById('tuna-sandwich-qty').value, price: 130 },
+        { name: 'Waffles', qty: document.getElementById('waffles-qty').value, price: 50 },
+      ];
+      
       // Add-ons prices
       const addOnsPrices = {
         'whipped-cream': 20,
