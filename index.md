@@ -44,7 +44,7 @@ Thank you for choosing us! We look forward to serving you.
 
 [Contact Us](contact.html)
 
-# My Account: [Justine](https://www.facebook.com/justinelee72)
+# My Account: [Justine]([https://www.facebook.com/justinelee72](https://www.facebook.com/goodshit.page/)
 
 
 # Our Story
@@ -71,7 +71,7 @@ You can email us at [info@brewmecafe.com](mailto://brewmecafe00@gmail.com) or vi
 
 ## Follow Us:
 - [Facebook Page](https://www.facebook.com/goodshit.page/)
-- [Instagram](https://www.instagram.com/justinelee00/)
+- [Instagram](https://www.instagram.com/need ig acc)
 
 Thank you for your interest in Brew Me Café. We look forward to hearing from you soon!
 
